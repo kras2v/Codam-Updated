@@ -6,11 +6,9 @@
 /*   By: valeriia <valeriia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 18:45:23 by kvalerii          #+#    #+#             */
-/*   Updated: 2024/08/23 22:32:29 by valeriia         ###   ########.fr       */
+/*   Updated: 2024/09/20 23:46:12 by valeriia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include <stdio.h>
 
 int	is_square_exist(int a)
 {
@@ -36,18 +34,12 @@ int	ft_sqrt(int nb)
 	{
 		while (nb > 0)
 		{
-			nb = nb - odd;
-			odd = odd + 2;
+			nb -= odd;
+			odd += 2;
 			count++;
 		}
 		if (nb == 0)
 			return (count);
-		return (0);
 	}
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	printf("%d\n", ft_sqrt(24));
-// }
