@@ -6,13 +6,13 @@
 /*   By: valeriia <valeriia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 11:20:53 by kvalerii          #+#    #+#             */
-/*   Updated: 2024/09/20 18:19:04 by valeriia         ###   ########.fr       */
+/*   Updated: 2024/09/20 23:03:21 by valeriia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	if(n == 0)
+	if (n == 0)
 		return (0);
 	while (--n && *s1 && (*s1 == *s2))
 	{

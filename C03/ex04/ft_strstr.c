@@ -6,7 +6,7 @@
 /*   By: valeriia <valeriia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 19:58:20 by valeriia          #+#    #+#             */
-/*   Updated: 2024/09/20 18:07:08 by valeriia         ###   ########.fr       */
+/*   Updated: 2024/09/20 23:04:43 by valeriia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,18 @@ char	*ft_strstr(char *str, char *to_find)
 
 	i = 0;
 	j = 0;
-	if(!to_find[j])
-		return str;
+	if (!to_find[j])
+		return (str);
 	while (str[i])
 	{
-		if(j != 0)
+		if (j != 0)
 			i = i - j;
 		j = 0;
-		while(str[i] == to_find[j])
+		while (str[i] == to_find[j])
 		{
 			i++;
 			if (!to_find[++j])
-				return &str[i - j];
+				return (&str[i - j]);
 		}
 		i++;
 	}
