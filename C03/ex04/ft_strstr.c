@@ -3,64 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kvalerii <kvalerii@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriia <valeriia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 19:58:20 by valeriia          #+#    #+#             */
-/*   Updated: 2024/08/19 16:22:17 by kvalerii         ###   ########.fr       */
+/*   Updated: 2024/09/20 18:07:08 by valeriia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_strlen(char* str)
-{
-	int	len;
-
-	len = 0;
-	while (*str)
-	{
-		str++;
-		len++;
-	}
-	return (len);
-}
-
-int	ft_is_null_or_empty(char *str)
-{
-	return (*str == '\0');
-}
-
 char	*ft_strstr(char *str, char *to_find)
 {
 	int		i;
 	int		j;
-	int		to_find_len;
 
-	to_find_len = ft_strlen(to_find);
 	i = 0;
 	j = 0;
-	if(ft_is_null_or_empty(to_find))
+	if(!to_find[j])
 		return str;
-	while (str[i] != '\0')
+	while (str[i])
 	{
-		if(str[i] == to_find[j])
-		{
-			j++;
-			if (j == to_find_len)
-				return &str[i - j + 1];
-		}
-		else
-		{
+		if(j != 0)
 			i = i - j;
-   j = 0;
+		j = 0;
+		while(str[i] == to_find[j])
+		{
+			i++;
+			if (!to_find[++j])
+				return &str[i - j];
 		}
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
-
-// int	main(void)
-// {
-// 	printf("%s", ft_strstr("ACBCD", "AAAAA"));
-// 	return (0);
-// }
