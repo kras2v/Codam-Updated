@@ -6,7 +6,7 @@
 /*   By: valeriia <valeriia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 11:27:33 by valeriia          #+#    #+#             */
-/*   Updated: 2024/09/20 15:55:12 by valeriia         ###   ########.fr       */
+/*   Updated: 2024/09/20 23:33:13 by valeriia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,19 +99,18 @@ void	ft_print_line(char *p_addr, unsigned int *i)
 		write(1, &p_addr[*i], 1);
 	else
 		write(1, ".", 1);
-	if (p_addr[*i] == '\0')
+	if (p_addr[(*i)++] == '\0')
 	{
-		(*i)++;
+		write(1, "\n", 1);
 		return ;
 	}
 	if (p_addr[*i] != '\0')
 		(*i)++;
 	while (*i % 16 != 0)
 	{
-		if (p_addr[*i] == '\0')
+		if (p_addr[(*i)++] == '\0')
 		{
 			write(1, ".", 1);
-			(*i)++;
 			break ;
 		}
 		if (p_addr[*i] >= 32 && p_addr[*i] <= 126)
@@ -120,6 +119,7 @@ void	ft_print_line(char *p_addr, unsigned int *i)
 			write(1, ".", 1);
 		(*i)++;
 	}
+	write(1, "\n", 1);
 }
 
 void	ft_print_memory(void *addr, unsigned int size)
@@ -147,7 +147,6 @@ void	ft_print_memory(void *addr, unsigned int size)
 			}
 			i = start;
 			ft_print_line(p_addr, &i);
-			write(1, "\n", 1);
 		}
 	}
 }
