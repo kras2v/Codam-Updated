@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kvalerii <kvalerii@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriia <valeriia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 10:49:18 by kvalerii          #+#    #+#             */
-/*   Updated: 2024/08/26 18:15:21 by kvalerii         ###   ########.fr       */
+/*   Updated: 2024/09/20 23:36:20 by valeriia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include <stdio.h>
 
 int	ft_is_num(char ch)
 {
@@ -49,9 +47,3 @@ int	ft_atoi(char *str)
 	res *= ft_sign(minus_counter);
 	return (res);
 }
-
-// int	main(void)
-// {
-// 	printf("%d", ft_atoi("  \n \t \v  \r \f --+---+1234ab567"));
-// 	return (0);
-// }

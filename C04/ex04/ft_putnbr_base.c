@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kvalerii <kvalerii@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriia <valeriia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 21:12:56 by valeriia          #+#    #+#             */
-/*   Updated: 2024/08/28 19:07:17 by kvalerii         ###   ########.fr       */
+/*   Updated: 2024/09/20 23:38:10 by valeriia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,9 +80,3 @@ void	ft_putnbr_base(int nbr, char *base)
 		ft_write_nbr_base(res, --i);
 	}
 }
-
-// int	main(void)
-// {
-// 	ft_putnbr_base(123, "");
-// 	return (0);
-// }

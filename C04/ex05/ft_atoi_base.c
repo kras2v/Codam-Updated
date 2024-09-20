@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kvalerii <kvalerii@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriia <valeriia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 21:14:40 by valeriia          #+#    #+#             */
-/*   Updated: 2024/08/28 21:11:01 by kvalerii         ###   ########.fr       */
+/*   Updated: 2024/09/20 23:39:59 by valeriia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_is_base_symbol(char ch, char *base)
 {
@@ -113,10 +111,4 @@ int	ft_atoi_base(char *str, char *base)
 	}
 	res_str[i] = '\0';
 	return (ft_base_to_dec(res_str, base, i, minus_counter));
-}
-
-int	main(void)
-{
-	printf("%d", ft_atoi_base("  \nVf", "0123456789ABCDEF"));
-	return (0);
 }

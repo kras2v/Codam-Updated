@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kvalerii <kvalerii@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriia <valeriia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 10:33:53 by kvalerii          #+#    #+#             */
-/*   Updated: 2024/08/20 10:41:08 by kvalerii         ###   ########.fr       */
+/*   Updated: 2024/09/20 23:02:53 by valeriia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,3 @@ void	ft_putstr(char *str)
 		write(1, str++, 1);
 	}
 }
-
-// int	main(void)
-// {
-// 	ft_putstr("Hello");
-// 	return (0);
-// }
