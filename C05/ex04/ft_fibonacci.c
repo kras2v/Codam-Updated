@@ -6,7 +6,7 @@
 /*   By: valeriia <valeriia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 18:23:08 by kvalerii          #+#    #+#             */
-/*   Updated: 2024/09/20 23:45:08 by valeriia         ###   ########.fr       */
+/*   Updated: 2024/09/20 23:58:42 by valeriia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,3 @@ int	ft_fibonacci(int index)
 		return (0);
 	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }
-

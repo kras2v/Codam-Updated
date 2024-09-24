@@ -1,33 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   display_file copy.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: valeriia <valeriia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/23 23:18:59 by valeriia          #+#    #+#             */
-/*   Updated: 2024/09/21 00:00:32 by valeriia         ###   ########.fr       */
+/*   Created: 2024/09/20 15:05:39 by valeriia          #+#    #+#             */
+/*   Updated: 2024/09/20 15:35:45 by valeriia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <fcntl.h>
 
-void	ft_print(char *str)
+void	ft_putstr(char *str)
 {
 	while (*str)
 		write(1, str++, 1);
-	write(1, "\n", 1);
 }
 
 int	main(int argc, char *argv[])
 {
-	int	i;
+	char	buffer[1];
+	int		fd;
+	int		bytes;
 
-	i = argc - 1;
-	while (i > 0)
+	if (argc == 1)
+		ft_putstr("File name missing.");
+	else if (argc > 2)
+		ft_putstr("Too many arguments.");
+	else
 	{
-		ft_print(argv[i]);
-		i--;
+		fd = open(argv[1], 1);
+		while ((bytes = read(fd, buffer, sizeof(buffer))) > 0)
+			ft_putstr(buffer);
+		if (bytes < 0)
+			ft_putstr("Cannot read file.");
+		close(fd);
 	}
 	return (0);
 }

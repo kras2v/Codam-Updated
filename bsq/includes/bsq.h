@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   bsq.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: valeriia <valeriia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/23 23:18:59 by valeriia          #+#    #+#             */
-/*   Updated: 2024/09/21 00:00:32 by valeriia         ###   ########.fr       */
+/*   Created: 2024/09/03 19:52:53 by valeriia          #+#    #+#             */
+/*   Updated: 2024/09/03 19:59:31 by valeriia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef BSQ_H
+# define BSQ_H
+
+#include <fcntl.h>
 #include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "structures.h"
+#include "ft.h"
 
-void	ft_print(char *str)
-{
-	while (*str)
-		write(1, str++, 1);
-	write(1, "\n", 1);
-}
-
-int	main(int argc, char *argv[])
-{
-	int	i;
-
-	i = argc - 1;
-	while (i > 0)
-	{
-		ft_print(argv[i]);
-		i--;
-	}
-	return (0);
-}
+#endif

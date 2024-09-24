@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kvalerii <kvalerii@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriia <valeriia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 23:18:59 by valeriia          #+#    #+#             */
-/*   Updated: 2024/08/26 19:57:17 by kvalerii         ###   ########.fr       */
+/*   Updated: 2024/09/21 00:00:03 by valeriia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,7 @@
 void	ft_print(char *str)
 {
 	while (*str)
-	{
-		write(1, str, 1);
-		str++;
-	}
+		write(1, str++, 1);
 	write(1, "\n", 1);
 }
 

@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kvalerii <kvalerii@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriia <valeriia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 20:34:25 by kvalerii          #+#    #+#             */
-/*   Updated: 2024/08/29 15:27:20 by kvalerii         ###   ########.fr       */
+/*   Updated: 2024/09/21 00:06:12 by valeriia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
 
 int	*ft_range(int min, int max)
@@ -35,27 +34,3 @@ int	*ft_range(int min, int max)
 	return (range);
 }
 
-int	main(void)
-{
-	int	*range;
-	int	i;
-	int	min;
-	int	max;
-
-	min = 1;
-	max = 5;
-	range = ft_range(15, 10);
-	i = 0;
-	if(!range)
-	{
-		printf("NULL");
-		return (1);
-	}
-	while(i < max - 1)
-	{
-		printf("%d ", range[i]);
-		i++;
-	}
-	free(range);
-	return (0);
-}

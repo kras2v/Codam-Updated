@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kvalerii <kvalerii@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriia <valeriia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 23:25:42 by valeriia          #+#    #+#             */
-/*   Updated: 2024/08/26 19:59:16 by kvalerii         ###   ########.fr       */
+/*   Updated: 2024/09/21 00:01:56 by valeriia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,14 @@ void	ft_print(char *str)
 	write(1, "\n", 1);
 }
 
-int	ft_strcmp(char *a, char *b)
+int	ft_strcmp(char *s1, char *s2)
 {
-	while (*a || *b)
+	while (*s1 && (*s1 == *s2))
 	{
-		if (*a > *b)
-			return (1);
-		else if (*a < *b)
-			return (-1);
-		a++;
-		b++;
+		s1++;
+		s2++;
 	}
-	return (0);
+	return (*s1 - *s2);
 }
 
 void	ft_swap(char **a, char **b)

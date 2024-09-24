@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   map_reader.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: valeriia <valeriia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/23 23:18:59 by valeriia          #+#    #+#             */
-/*   Updated: 2024/09/21 00:00:32 by valeriia         ###   ########.fr       */
+/*   Created: 2024/09/02 11:17:28 by spyun             #+#    #+#             */
+/*   Updated: 2024/09/03 19:51:45 by valeriia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
+#include "structures.h"
 
-void	ft_print(char *str)
+char	**map_generator(FILE *map)
 {
-	while (*str)
-		write(1, str++, 1);
-	write(1, "\n", 1);
-}
-
-int	main(int argc, char *argv[])
-{
-	int	i;
-
-	i = argc - 1;
-	while (i > 0)
-	{
-		ft_print(argv[i]);
-		i--;
-	}
-	return (0);
+	t_map_info	map_info;
+	int			i;
+	
 }

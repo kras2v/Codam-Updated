@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   structures.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: valeriia <valeriia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/23 23:18:59 by valeriia          #+#    #+#             */
-/*   Updated: 2024/09/21 00:00:32 by valeriia         ###   ########.fr       */
+/*   Created: 2024/09/03 19:51:36 by valeriia          #+#    #+#             */
+/*   Updated: 2024/09/03 23:39:05 by valeriia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef STRUCTURES_H
+# define STRUCTURES_H
 
-void	ft_print(char *str)
+typedef struct s_map_info
 {
-	while (*str)
-		write(1, str++, 1);
-	write(1, "\n", 1);
-}
+	int		height;
+	int		width;
+	char	empty_ch;
+	char	obstacle_ch;
+	char	full_ch;
+	char	**grid;
+}	t_map_info;
 
-int	main(int argc, char *argv[])
+typedef struct s_the_BSQ
 {
-	int	i;
+	int	x;
+	int	y;
+	int	area;
+}	t_the_BSQ;
 
-	i = argc - 1;
-	while (i > 0)
-	{
-		ft_print(argv[i]);
-		i--;
-	}
-	return (0);
-}
+#endif

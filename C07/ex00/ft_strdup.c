@@ -3,26 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kvalerii <kvalerii@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriia <valeriia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 20:07:00 by kvalerii          #+#    #+#             */
-/*   Updated: 2024/08/29 10:08:02 by kvalerii         ###   ########.fr       */
+/*   Updated: 2024/09/21 00:04:39 by valeriia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
 #include <stdlib.h>
 
-int	ft_strlen(char *src)
+int	ft_strlen(char *str)
 {
-	int	i;
+	int	len;
 
-	i = 0;
-	while (src[i])
-	{
-		i++;
-	}
-	return (i);
+	len = 0;
+	while (*str++)
+		len++;
+	return (len);
 }
 
 char	*ft_strdup(char *src)
@@ -41,15 +38,3 @@ char	*ft_strdup(char *src)
 	*p_dest = '\0';
 	return (dest);
 }
-
-// int	main(void)
-// {
-// 	char *str;
-// 	char *dest;
-
-// 	str = "Hello";
-// 	dest = ft_strdup("Hello");
-// 	printf("%s", dest);
-// 	free(dest);
-// 	return (0);
-// }
