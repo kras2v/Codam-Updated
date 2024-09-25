@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_show_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kvalerii <kvalerii@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rmzvr <rmzvr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/30 10:12:54 by kvalerii          #+#    #+#             */
-/*   Updated: 2024/08/31 15:19:07 by kvalerii         ###   ########.fr       */
+/*   Updated: 2024/09/25 21:22:31 by rmzvr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stock_str.h"
 #include <unistd.h>
 
 void	ft_putstr(char *str)

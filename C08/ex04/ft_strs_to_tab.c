@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strs_to_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kvalerii <kvalerii@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rmzvr <rmzvr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 15:53:22 by kvalerii          #+#    #+#             */
-/*   Updated: 2024/08/31 15:20:09 by kvalerii         ###   ########.fr       */
+/*   Updated: 2024/09/25 21:22:20 by rmzvr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stock_str.h"
 #include <stdlib.h>
 
 int	ft_strlen(char *str)
